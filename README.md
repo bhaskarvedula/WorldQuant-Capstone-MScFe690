@@ -31,7 +31,6 @@ In this capstone, we use policy-based algorithms that are well suited to the pro
 
 5. **Soft Actor-Critic (SAC)**. SAC is like actor-critic algorithms operating in continuous actions space but additionally incorporates entropy within the reward structure. This brings about greater stability by encouraging greater exploration. Unlike DDPG and TD3, SAC employs stochastic policy as opposed to deterministic policies. The additional feature, however, introduces greater computing complexity.
 
-
 ## **Data, Transformation and Design**
 
 ### *Description of Dataset*
@@ -50,11 +49,10 @@ The RL algorithms used for this study include A2C, PPO, TD3, SAC and DDPG and we
 <BR>
 We use Hidden Mark Model to identify and understand regime changes using NIFTY 50 index as the proxy for our portfolio. We also use correlation analysis to understand dependencies and relationships within the stocks in our portfolio. This will also help explain the portfolio results we observe.
 <BR>
-*Data transformations*
+### *Data transformations*
 <BR>
 <BR>
 Based on the raw data that has been extracted, certain transformations are carried out for the purposes of calibrating and testing these algorithms. These transformations include identifying and addressing missing data, creating lagged returns, covariances, and creating technical indicators.  We also define, train and run an LSTM model and transformer model and use their outputs as states of our RL agents. After all transformations have been performed on the dataset, this dataset is split into training, testing and validation sets in the proportion of 75%, 20% and 5% to train and evaluate our algorithms. As our dataset is a financial timeseries data, we have split the data into a training time horizon, testing time horizon and validation time horizon.
-<BR>
 <BR>
 ### *RL setup*
 The RL environment is defined as the stock environment that take an action and provides back reward in the nature of portfolio value based on the weights provided (which is action). We use multiple state representations that include technical indicators, lagged returns, LSTM model and transformer model outputs. Once an action is taken by the agent that is the portfolio weights, the environment provides the agent with a new state. The reward function is defined as the cumulative gain on the portfolio at the end of investment horizon. We have chosen this reward as we expect it to encapsulate all aspects that ultimately result in maximum portfolio gain. This generally the objective of most investors.
