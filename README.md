@@ -65,14 +65,11 @@ We use the following measure to gauge the performance of traditional algorithms,
 *   Maximum drawdown
 *   Sharpe’s ratio
 <BR>
-<BR>
-
 For analysis of best performing algorithm and RL agent with the buy and hold strategy, we expand the above measures further and include metrics like Sortino’s ratio for evaluating results from DynaCAAST framework.
 
 ## **Code explanation**
 
 The code written for this capstone has been compartmentalized as multiple section with each section capturing a particular functionality or activity. This is to enable ease of understanding the entire code.
-
 
 ## *Section 1: Python library installations and imports*
 
@@ -139,9 +136,10 @@ In this section, we benchmark our DynaCAAST algorithm against Nifty 50 index. Th
 
 In this section, utilizing our DynaCAAST framework, we run it again on the validation data to confirm its effectiveness. We then evaluate the performance of DynaCAAST Framework with buy and hold strategy on the validation data.
 
-
-**Transformer Module**
+# **Transformer Module**
+<BR>
 In order to create state space using forecasts from transformer model, we create a separate notebook. This is to facilitate running on GPU as opposed to running on CPU for the above main notebook. The notebook organization is fairly self-evident. In Section 1, we import our libraries. In Section 2, we define few functions needed for our transformer model. Section 3 defines, the start and end dates and the tickers. In section 4, we train our model. In Section 5, we evaluate the model just as we did for LSTM model. In Section 6, we create our features file in csv format for use in the main notebook.
 
-**Stress Period Analysis**
+# **Stress Period Analysis**
+<BR>
 We repeat the entire exercise above for financial stress period to confirm the efficacy of our models and DynaCAAST framework. For this purpose, we choose the Great Financial Crisis and use the period  2006-01-01 to 2009-12-31.
