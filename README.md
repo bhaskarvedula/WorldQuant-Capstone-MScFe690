@@ -38,7 +38,6 @@ We select a time-period from January 1, 2021, to April 30, 2025, for our study t
 <BR>
 We used the Yahoo Finance website as our main data source as this platform provides the required data in easily extractable form (for programming in Python). Through this website, we gather datasets for each of the chosen stocks that contain daily open price, high price, low price and close price and volumes for all these stocks. We also gather daily index values for NIFTY 50 for the chosen time horizon.
 <BR>
-<BR>
 The portfolio constituents for this analysis are 26 companies that form part of the NIFTY 50 index. We also consider CASH as one of our 'ticker' to allow our RL agents the flexibility of responding to systemic events. Our objective is for the RL agents to output weights of these companies within the portfolio such that at the end of the investment horizon, the value of the portfolio will be  maximized. The rebalancing will be performed daily, and trading of these stocks will be towards ensuring the weights forecast by RL agents. To have a realistic market scenario, we consider a transaction of 0.3% of the transacted amount.
 ### *Description of Algorithms*
 The objective of our study is to gauge the performance of traditional portfolio management techniques before drawing comparisons between them and the RL algorithms. These traditional portfolio management techniques constitute our baseline or benchmark algorithms. The algorithms chosen for this study include Markowitz means-variance theory, De Prado denoising, equal-weighting and Kelly’s Criterion. Based on the outcome of the analysis, we choose the best performing RL and traditional algorithm to be compared against NIFTY buy-and-hold strategy. We also develop a **DynaCAAST framework** that mitigates the inherent variability observed in offline RL agents.
@@ -50,7 +49,6 @@ The RL algorithms used for this study include A2C, PPO, TD3, SAC and DDPG and we
 We use Hidden Mark Model to identify and understand regime changes using NIFTY 50 index as the proxy for our portfolio. We also use correlation analysis to understand dependencies and relationships within the stocks in our portfolio. This will also help explain the portfolio results we observe.
 <BR>
 ### *Data transformations*
-<BR>
 <BR>
 Based on the raw data that has been extracted, certain transformations are carried out for the purposes of calibrating and testing these algorithms. These transformations include identifying and addressing missing data, creating lagged returns, covariances, and creating technical indicators.  We also define, train and run an LSTM model and transformer model and use their outputs as states of our RL agents. After all transformations have been performed on the dataset, this dataset is split into training, testing and validation sets in the proportion of 75%, 20% and 5% to train and evaluate our algorithms. As our dataset is a financial timeseries data, we have split the data into a training time horizon, testing time horizon and validation time horizon.
 <BR>
@@ -65,7 +63,7 @@ We use the following measure to gauge the performance of traditional algorithms,
 <BR>
 For analysis of best performing algorithm and RL agent with the buy and hold strategy, we expand the above measures further and include metrics like Sortino’s ratio for evaluating results from DynaCAAST framework.
 
-## **Code explanation**
+# **Code explanation**
 
 The code written for this capstone has been compartmentalized as multiple section with each section capturing a particular functionality or activity. This is to enable ease of understanding the entire code.
 
