@@ -64,7 +64,7 @@ For analysis of best performing algorithm and RL agent with the buy and hold str
 
 # **Code explanation**
 
-The code written *(DynaCAAST framework for RL based trading agents_itr2.ipynb)* for this capstone has been compartmentalized as multiple section with each section capturing a particular functionality or activity. This is to enable ease of understanding the entire code.
+The code written **(DynaCAAST framework for RL based trading agents_itr2.ipynb)** for this capstone has been compartmentalized as multiple section with each section capturing a particular functionality or activity. This is to enable ease of understanding the entire code.
 
 ## *Section 1: Python library installations and imports*
 
@@ -133,8 +133,8 @@ In this section, utilizing our DynaCAAST framework, we run it again on the valid
 
 # **Transformer Module**
 <BR>
-In order to create state space using forecasts from transformer model, we create a separate notebook *(DynaCAASTUsingTransformers.ipynb)*. This is to facilitate running on GPU as opposed to running on CPU for the above main notebook. The notebook organization is fairly self-evident. In Section 1, we import our libraries. In Section 2, we define few functions needed for our transformer model. Section 3 defines, the start and end dates and the tickers. In section 4, we train our model. In Section 5, we evaluate the model just as we did for LSTM model. In Section 6, we create our features file in csv format for use in the main notebook.
+In order to create state space using forecasts from transformer model, we create a separate notebook (DynaCAASTUsingTransformers.ipynb). This is to facilitate running on GPU as opposed to running on CPU for the above main notebook. The notebook organization is fairly self-evident. In Section 1, we import our libraries. In Section 2, we define few functions needed for our transformer model. Section 3 defines, the start and end dates and the tickers. In section 4, we train our model. In Section 5, we evaluate the model just as we did for LSTM model. In Section 6, we create our features file in csv format for use in the main notebook.
 
 # **Stress Period Analysis**
 <BR>
-We repeat the entire exercise above for financial stress period  *(DynaCAAST framework for RL based trading agents_itr2_stress.ipynb and DynaCAASTUsingTransformers_Stress.ipynb)* to confirm the efficacy of our models and DynaCAAST framework. For this purpose, we choose the Great Financial Crisis and use the period  2006-01-01 to 2009-12-31.
+We repeat the entire exercise above for financial stress period (DynaCAAST framework for RL based trading agents_itr2_stress.ipynb and DynaCAASTUsingTransformers_Stress.ipynb) to confirm the efficacy of our models and DynaCAAST framework. For this purpose, we choose the Great Financial Crisis and use the period  2006-01-01 to 2009-12-31.
